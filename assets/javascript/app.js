@@ -121,8 +121,6 @@ function showFinalResults() {
     Math.round(score / quiz.length * 100) + "%<h2>";
 }
 
-
-
 window.addEventListener("load", askQuestion, false);
 submitBtn.addEventListener("click", checkAnswer, false);
 
