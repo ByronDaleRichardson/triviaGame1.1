@@ -1,23 +1,23 @@
 var quiz = [{
-  "question": "Which movie about Batman, stars Michael Keaton?",
-  "choices": ["Batman Forever", "Batman", "Batman & Robin", "Batman Begins"],
-  "correct": "Batman"
+  "question": "What city does Batman protect?",
+  "choices": ["New York", "Gotham", "Charlotte", "Metropolis"],
+  "correct": "Gotham"
 }, {
-  "question": "Who is the founder of Microsoft?",
-  "choices": ["Bill Gates", "Steve Jobs", "Steve Wozniak"],
-  "correct": "Bill Gates"
+  "question": "Who was Han Solo's partner in Star Wars?",
+  "choices": ["Chewbacca", "Wicket", "Harry Henderson", "The Human Furball"],
+  "correct": "Chewbacca"
 }, {
-  "question": "1 byte = ?",
-  "choices": ["8 bits", "64 bits", "1024 bits"],
-  "correct": "8 bits"
+  "question": "Who is Mario's brother?",
+  "choices": ["Yoshi", "Wario", "Bruce", "Luigi"],
+  "correct": "Luigi"
 }, {
-  "question": "The C programming language was developed by?",
-  "choices": ["Brendan Eich", "Dennis Ritchie", "Guido van Rossum"],
-  "correct": "Dennis Ritchie"
+  "question": "A hobbit is also know as a what?",
+  "choices": ["Midget", "Dwarf", "Halfling", "Gnome"],
+  "correct": "Halfling"
 }, {
-  "question": "What does CC mean in emails?",
-  "choices": ["Carbon Copy", "Creative Commons", "other"],
-  "correct": "Carbon Copy"
+  "question": "What is Iron Man's real name?",
+  "choices": ["Tony Stark", "Bruce Wayne", "Clark Kent", "Bruce Banner"],
+  "correct": "Tony Stark"
 }];
 
 
@@ -52,7 +52,7 @@ function askQuestion() {
   }
 
   // load the question
-  questionContainer.textContent = "Q" + (currentQuestion + 1) + ". " +
+  questionContainer.textContent = "#" + (currentQuestion + 1) + ". " +
     quiz[currentQuestion].question;
 
   // load the choices
@@ -115,8 +115,8 @@ function checkAnswer() {
 }
 
 function showFinalResults() {
-  content.innerHTML = "<h2>You've complited the quiz!</h2>" +
-    "<h2>Below are your results:</h2>" +
+  content.innerHTML = "<h2>Congrats!</h2>" +
+    "<h2>You correctly answered:</h2>" +
     "<h2>" + score + " out of " + quiz.length + " questions, " +
     Math.round(score / quiz.length * 100) + "%<h2>";
 }
@@ -126,12 +126,11 @@ function showFinalResults() {
 window.addEventListener("load", askQuestion, false);
 submitBtn.addEventListener("click", checkAnswer, false);
 
-$(document).ready(function(){
-        //div hidden by default           
-  $("#content").hide();
+// show hidden div
+function showDiv() {
+  document.getElementById("content").removeAttribute("class");
+  function timer() {
 
-  $("#start").click(function(){
+  }
 
-    $("#content").show();
-  });  
-});
+}
