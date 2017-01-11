@@ -127,6 +127,7 @@ submitBtn.addEventListener("click", checkAnswer, false);
 // show hidden div
 function showDiv() {
   document.getElementById("content").removeAttribute("class");
+  document.getElementById("ready").style.display = "none";
   function timer() {
 
   }
